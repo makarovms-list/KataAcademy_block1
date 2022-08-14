@@ -327,9 +327,148 @@ body {
           }
         }
       }
-
     }
   }
+
+  .modal-menu {
+    width: 100%;
+    max-width: 320px;
+    background: $headerbg;
+    box-shadow: -2px 0px 4px #454f7e05, 16px 0px 52px #0e185033;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .modal-title {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      .modal-title__close {
+        margin-right: 16px;
+      }
+      .modal-title__logo {
+        img {
+          height: 50px;
+          width: auto;
+        }
+      }
+      .modal-title__search {
+        margin-left: auto;
+      }
+    }
+    .modal-body {
+      .modal-body__menu {
+        margin: 24px 0;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li {
+            padding-left: 24px;
+            min-height: 32px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            a {
+              font-size: 16px;
+              line-height: 150%;
+              letter-spacing: -0.2px;
+              color: $textColor;
+            }
+            &+li {
+              margin-top: 24px;
+            }
+            &.modal-body__menu--active {
+              a {
+                color: $contentInlineMenuColor;
+              }
+            }
+            &.modal-body__menu--active:before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 4px;
+              height: 100%;
+              border-radius: 0 25% 25% 0;
+              background: $contentTitleBorder;
+            }
+          }
+        }
+      }
+    }
+    .modal-footer {
+      margin-top: auto;
+      .modal-icon-menu {
+        display: flex;
+        margin: 0 24px 16px;
+        div+div {
+          margin-left: 16px;
+        }
+      }
+      .modal-footer__mail {
+        margin: 0 24px 12px;
+        a {
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: -0.2px;
+          color: $textColor;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .modal-footer__phone {
+        margin: 0 24px 40px;
+        a {
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: -0.6px;
+          color: $textColor;
+          text-decoration: none;
+          font-weight: 700;
+        }
+      }
+      .modal-footer__menu {
+        margin: 0 24px;
+        ul {
+          margin: 0;
+          padding: 0 0 32px;
+          list-style: none;
+          display: flex;
+          li {
+            cursor: pointer;
+            a {
+              font-size: 16px;
+              line-height: 150%;
+              letter-spacing: -0.2px;
+              color: $textColor;
+            }
+            &.modal-footer__menu--active {
+              a {
+                color: $contentInlineMenuColor;
+              }
+            }
+            &+li {
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
