@@ -1,3 +1,2 @@
+import '../scss/fonts.scss';
 import '../scss/style.scss';
-
-console.log('Works!');
